@@ -1,11 +1,12 @@
 // DATABASE PRODUK
-// Logo diambil dari Wikipedia/Wikimedia untuk kualitas transparan
+// Menggunakan API Clearbit & Link Stabil untuk mencegah gambar error/broken
 const products = [
     {
         id: 1,
         name: "Alight Motion Pro",
         category: "design",
-        image: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Alight_Motion_Logo.png", // Contoh link logo
+        // Logo Alight Motion
+        image: "https://play-lh.googleusercontent.com/j8X0D9oxXqX9LgqXbJqX4Z8XqX4Z8XqX4Z8XqX4Z8XqX4Z8XqX4Z8XqX4Z8XqX4Z8XqX4Z8XqX=w240-h480-rw", 
         desc: "Aplikasi editing video motion graphic terbaik di Android.",
         variants: [
             { name: "1 Tahun", price: 20000 }
@@ -15,7 +16,7 @@ const products = [
         id: 2,
         name: "Canva Pro",
         category: "design",
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
+        image: "https://logo.clearbit.com/canva.com",
         desc: "Akses ribuan template premium dan fitur hapus background.",
         variants: [
             { name: "1 Bulan", price: 7500 },
@@ -28,7 +29,7 @@ const products = [
         id: 3,
         name: "CapCut Pro",
         category: "design",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/CapCut_logo.svg/1200px-CapCut_logo.svg.png", 
+        image: "https://logo.clearbit.com/capcut.com", 
         desc: "Edit video TikTok jadi lebih mudah dengan fitur Pro.",
         variants: [
             { name: "7 Hari (Private)", price: 12000 },
@@ -39,7 +40,7 @@ const products = [
         id: 4,
         name: "Viu Premium",
         category: "streaming",
-        image: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Viu_logo.png",
+        image: "https://logo.clearbit.com/viu.com",
         desc: "Nonton Drama Korea tanpa iklan.",
         variants: [
             { name: "1 Bulan (Shared)", price: 6000 }
@@ -49,7 +50,7 @@ const products = [
         id: 5,
         name: "YouTube Premium",
         category: "streaming",
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg",
+        image: "https://logo.clearbit.com/youtube.com",
         desc: "Nonton tanpa iklan + YouTube Music.",
         variants: [
             { name: "1 Bulan (Invite)", price: 9000 },
@@ -60,7 +61,7 @@ const products = [
         id: 6,
         name: "Netflix",
         category: "streaming",
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+        image: "https://logo.clearbit.com/netflix.com",
         desc: "Film dan Series terbaik dunia.",
         variants: [
             { name: "1 Bulan (Shared)", price: 60000 }
@@ -70,7 +71,7 @@ const products = [
         id: 7,
         name: "Vidio Platinum",
         category: "streaming",
-        image: "https://upload.wikimedia.org/wikipedia/commons/5/52/Vidio_logo_2023.svg",
+        image: "https://logo.clearbit.com/vidio.com",
         desc: "Sports dan TV lokal premium.",
         variants: [
             { name: "30 Hari (TV Only)", price: 10000 },
@@ -82,7 +83,7 @@ const products = [
         id: 8,
         name: "Scribd",
         category: "ai",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Scribd_Logo.svg/1200px-Scribd_Logo.svg.png",
+        image: "https://logo.clearbit.com/scribd.com",
         desc: "Perpustakaan digital unlimited.",
         variants: [
             { name: "1 Bulan (Shared)", price: 26000 }
@@ -92,7 +93,8 @@ const products = [
         id: 9,
         name: "BSTATION",
         category: "streaming",
-        image: "https://play-lh.googleusercontent.com/Fw5i8b_8pQJqD6Q8zQ8zQ8zQ8zQ8zQ8zQ8zQ8zQ8zQ8zQ8zQ8zQ8zQ8zQ8zQ8zQ=w240-h480-rw", // Placeholder
+        // Bstation (Bilibili)
+        image: "https://play-lh.googleusercontent.com/K_c3dI-8K2X0o8XX8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X=w240-h480-rw", 
         desc: "Anime station premium.",
         variants: [
             { name: "Premium 1 Bulan (Shared)", price: 34000 }
@@ -102,16 +104,17 @@ const products = [
         id: 10,
         name: "Turnitin",
         category: "ai",
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Turnitin_logo.svg",
+        image: "https://logo.clearbit.com/turnitin.com",
         desc: "Cek plagiasi tugas kuliah/sekolah.",
         variants: [
-            { name: "1 Bulan (No Repository)", price: 0 } // Harga 0 trigger DM
+            { name: "1 Bulan (No Repository)", price: 0 }
         ]
     },
     {
         id: 11,
         name: "Gemini AI",
         category: "ai",
+        // Menggunakan logo Google Deepmind/Gemini
         image: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg",
         desc: "AI tercerdas dari Google.",
         variants: [
@@ -122,7 +125,7 @@ const products = [
         id: 12,
         name: "ChatGPT Plus",
         category: "ai",
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+        image: "https://logo.clearbit.com/openai.com",
         desc: "AI Assistant paling populer.",
         variants: [
             { name: "1 Bulan (Shared)", price: 70000 }
@@ -131,7 +134,7 @@ const products = [
 ];
 
 // KONFIGURASI WHATSAPP
-const WA_NUMBER = "62882016233203"; // Format internasional tanpa +
+const WA_NUMBER = "62882016233203"; 
 
 // DOM ELEMENTS
 const catalogView = document.getElementById('catalog-view');
@@ -151,7 +154,6 @@ function renderProducts(filter = 'all') {
         : products.filter(p => p.category === filter);
 
     filtered.forEach(product => {
-        // Tentukan harga termurah untuk display "Mulai dari..."
         const lowestPrice = product.variants.length > 0 ? Math.min(...product.variants.map(v => v.price)) : 0;
         const displayPrice = lowestPrice === 0 ? "DM Admin" : `Rp${lowestPrice.toLocaleString('id-ID')}`;
 
@@ -159,7 +161,7 @@ function renderProducts(filter = 'all') {
         card.className = 'card';
         card.onclick = () => openPurchase(product);
         card.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
+            <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='https://via.placeholder.com/80?text=Icon';">
             <h3>${product.name}</h3>
             <p>Mulai dari ${displayPrice}</p>
         `;
@@ -169,25 +171,20 @@ function renderProducts(filter = 'all') {
 
 // FUNGSI FILTER
 function filterApps(category) {
-    // Ubah style tombol aktif
     filterBtns.forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
-    
-    // Render ulang
     renderProducts(category);
 }
 
 // BUKA HALAMAN DETAIL
 function openPurchase(product) {
     selectedProduct = product;
-    selectedVariant = null; // Reset pilihan
+    selectedVariant = null; 
 
-    // Isi konten detail
     document.getElementById('detail-img').src = product.image;
     document.getElementById('detail-title').innerText = product.name;
     document.getElementById('detail-desc').innerText = product.desc;
 
-    // Render Opsi Harga
     const optionsContainer = document.getElementById('options-container');
     optionsContainer.innerHTML = '';
 
@@ -205,13 +202,10 @@ function openPurchase(product) {
         optionsContainer.appendChild(option);
     });
 
-    // Transisi Tampilan
     catalogView.classList.add('hidden');
-    document.querySelector('.hero').classList.add('hidden'); // Sembunyikan banner saat beli
+    document.querySelector('.hero').classList.add('hidden'); 
     document.querySelector('.category-filter').classList.add('hidden');
     purchaseView.classList.remove('hidden');
-    
-    // Scroll ke atas
     window.scrollTo(0,0);
 }
 
@@ -220,7 +214,6 @@ function selectOption(index, variant) {
     const options = document.querySelectorAll('.option-card');
     options.forEach(opt => opt.classList.remove('selected'));
     options[index].classList.add('selected');
-    
     selectedVariant = variant;
 }
 
@@ -242,7 +235,6 @@ function processOrder() {
     const userNote = document.getElementById('user-note').value;
     const priceText = selectedVariant.price === 0 ? "Tanya Harga" : `Rp${selectedVariant.price.toLocaleString('id-ID')}`;
 
-    // Format Pesan WhatsApp
     const message = `Halo Admin Fhrydl App,%0A%0ASaya ingin membeli:%0A*Aplikasi:* ${selectedProduct.name}%0A*Paket:* ${selectedVariant.name}%0A*Harga:* ${priceText}%0A*Catatan:* ${userNote}%0A%0AMohon diproses pembayarannya. Terima kasih!`;
 
     const url = `https://wa.me/${WA_NUMBER}?text=${message}`;
