@@ -1,12 +1,12 @@
 // DATABASE PRODUK
-// Link gambar menggunakan Wikimedia Commons versi PNG agar stabil dan tidak error.
+// Menggunakan CDN SimpleIcons & GitHub User Content (Server paling stabil untuk Icon)
 const products = [
     {
         id: 1,
         name: "Alight Motion Pro",
         category: "design",
-        // Logo Alight Motion (Versi PlayStore Mirror)
-        image: "https://image.winudf.com/v2/image1/Y29tLmFsaWdodGNyZWF0aXZlLm1vdGlvbl9pY29uXzE2Mzc5MzE5NzVfMDQ1/icon.png?w=170&fakeurl=1", 
+        // Menggunakan Icon dari SimpleIcons CDN
+        image: "https://cdn.simpleicons.org/alightmotion/00D56D", 
         desc: "Aplikasi editing video motion graphic terbaik di Android.",
         variants: [
             { name: "1 Tahun", price: 20000 }
@@ -16,7 +16,7 @@ const products = [
         id: 2,
         name: "Canva Pro",
         category: "design",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/600px-Canva_icon_2021.svg.png",
+        image: "https://cdn.simpleicons.org/canva/00C4CC",
         desc: "Akses ribuan template premium dan fitur hapus background.",
         variants: [
             { name: "1 Bulan", price: 7500 },
@@ -29,7 +29,8 @@ const products = [
         id: 3,
         name: "CapCut Pro",
         category: "design",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/CapCut_logo.svg/600px-CapCut_logo.svg.png", 
+        // Icon CapCut warna putih agar kontras dengan dark mode
+        image: "https://cdn.simpleicons.org/capcut/ffffff", 
         desc: "Edit video TikTok jadi lebih mudah dengan fitur Pro.",
         variants: [
             { name: "7 Hari (Private)", price: 12000 },
@@ -40,7 +41,8 @@ const products = [
         id: 4,
         name: "Viu Premium",
         category: "streaming",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Viu_logo.png/600px-Viu_logo.png",
+        // Menggunakan Fallback Image yang aman (Logo TV Umum) karena Viu memblokir link luar
+        image: "https://cdn-icons-png.flaticon.com/512/3163/3163478.png",
         desc: "Nonton Drama Korea tanpa iklan.",
         variants: [
             { name: "1 Bulan (Shared)", price: 6000 }
@@ -50,7 +52,7 @@ const products = [
         id: 5,
         name: "YouTube Premium",
         category: "streaming",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/600px-YouTube_full-color_icon_%282017%29.svg.png",
+        image: "https://cdn.simpleicons.org/youtube/FF0000",
         desc: "Nonton tanpa iklan + YouTube Music.",
         variants: [
             { name: "1 Bulan (Invite)", price: 9000 },
@@ -61,7 +63,7 @@ const products = [
         id: 6,
         name: "Netflix",
         category: "streaming",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/600px-Netflix_2015_logo.svg.png",
+        image: "https://cdn.simpleicons.org/netflix/E50914",
         desc: "Film dan Series terbaik dunia.",
         variants: [
             { name: "1 Bulan (Shared)", price: 60000 }
@@ -71,7 +73,8 @@ const products = [
         id: 7,
         name: "Vidio Platinum",
         category: "streaming",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Vidio_logo_2023.svg/600px-Vidio_logo_2023.svg.png",
+        // Mengambil logo dari GitHub Avatar Vidio (Sangat Stabil)
+        image: "https://github.com/vidio.png",
         desc: "Sports dan TV lokal premium.",
         variants: [
             { name: "30 Hari (TV Only)", price: 10000 },
@@ -83,7 +86,7 @@ const products = [
         id: 8,
         name: "Scribd",
         category: "ai",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Scribd_Logo.svg/600px-Scribd_Logo.svg.png",
+        image: "https://cdn.simpleicons.org/scribd/1E8182",
         desc: "Perpustakaan digital unlimited.",
         variants: [
             { name: "1 Bulan (Shared)", price: 26000 }
@@ -93,8 +96,8 @@ const products = [
         id: 9,
         name: "BSTATION",
         category: "streaming",
-        // Menggunakan Logo Bilibili (Induk perusahaan Bstation) yang lebih stabil
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Bilibili_logo.svg/600px-Bilibili_logo.svg.png", 
+        // Menggunakan Icon Bilibili
+        image: "https://cdn.simpleicons.org/bilibili/00A1D6", 
         desc: "Anime station premium.",
         variants: [
             { name: "Premium 1 Bulan (Shared)", price: 34000 }
@@ -104,7 +107,8 @@ const products = [
         id: 10,
         name: "Turnitin",
         category: "ai",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Turnitin_logo.svg/600px-Turnitin_logo.svg.png",
+        // Mengambil dari GitHub Avatar Turnitin
+        image: "https://github.com/turnitin.png",
         desc: "Cek plagiasi tugas kuliah/sekolah.",
         variants: [
             { name: "1 Bulan (No Repository)", price: 0 }
@@ -114,7 +118,8 @@ const products = [
         id: 11,
         name: "Gemini AI",
         category: "ai",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/600px-Google_Gemini_logo.svg.png",
+        // Menggunakan Icon Google Sparkles (simbol AI Google)
+        image: "https://cdn.simpleicons.org/google/4285F4",
         desc: "AI tercerdas dari Google.",
         variants: [
             { name: "Pro Invite", price: 60000 }
@@ -124,7 +129,7 @@ const products = [
         id: 12,
         name: "ChatGPT Plus",
         category: "ai",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/600px-ChatGPT_logo.svg.png",
+        image: "https://cdn.simpleicons.org/openai/ffffff",
         desc: "AI Assistant paling populer.",
         variants: [
             { name: "1 Bulan (Shared)", price: 70000 }
@@ -159,8 +164,14 @@ function renderProducts(filter = 'all') {
         const card = document.createElement('div');
         card.className = 'card';
         card.onclick = () => openPurchase(product);
+        
+        // Perbaikan: Menambahkan styling khusus agar icon pas di tengah dan ukurannya konsisten
         card.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='https://placehold.co/80x80/222/fff?text=${product.name.charAt(0)}';">
+            <div style="height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                <img src="${product.image}" alt="${product.name}" 
+                     style="max-width: 60px; max-height: 60px; width: auto; height: auto; object-fit: contain;"
+                     onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/1170/1170466.png';">
+            </div>
             <h3>${product.name}</h3>
             <p>Mulai dari ${displayPrice}</p>
         `;
